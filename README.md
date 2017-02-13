@@ -4,11 +4,11 @@ building concerto-platform in docker
 ## Installtion Guide
 Install docker https://docs.docker.com/engine/installation/
 
-you can either use the dockerhub image to just run concerto
+you can either use the dockerhub image to just run concerto version  v5.0.beta.2.186
 ```sh
 $ sudo docker run -d -it -p 80:80 hadyrashwan/concerto
 ```
-or built it the latest and run it with the following 4 commands 
+or built  the latest and run it with the following 4 commands 
 Clone the repo
 ```sh
 $ git clone https://github.com/hadyrashwan/concerto-docker-build.git
