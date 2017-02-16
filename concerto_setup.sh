@@ -7,10 +7,7 @@ chown -R www-data /var/www &&
     git clone https://github.com/campsych/concerto-platform.git &&  
     mv concerto-platform /var/www/html/concerto ## change this with the version you want ##  -b dev --single-branch
 
-### concerto config
-chown -R www-data /var/www && \
-    git clone https://github.com/campsych/concerto-platform.git && \
-    mv concerto-platform /var/www/html/concerto ## change this with the version you want ##  -b dev --single-branch
+
 
 cp /var/www/html/concerto/app/config/parameters.yml.dist /var/www/html/concerto/app/config/parameters.yml && \
     cp /var/www/html/concerto/app/config/parameters_nodes.yml.dist /var/www/html/concerto/app/config/parameters_nodes.yml && \
