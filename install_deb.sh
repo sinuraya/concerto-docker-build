@@ -13,6 +13,7 @@ cat /etc/apache2/apache2.conf | awk '/<Directory \/var\/www\/>/,/AllowOverride N
 debconf-set-selections <<< "mysql-server mysql-server/root_password password $MYSQL_ROOT_PASSWORD"
 debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $MYSQL_ROOT_PASSWORD"
 apt-get install -y mysql-server
-service mysql start && mysql --user=root --password=$MYSQL_ROOT_PASSWORD -e "CREATE DATABASE concerto" && mysql --user=root --password=$MYSQL_ROOT_PASSWORD -e "SET GLOBAL sql_mode='' ;"
+service mysql start && mysql --user=root --password=$MYSQL_ROOT_PASSWORD -e "CREATE DATABASE concerto"
 PHP_DATETIMEZONE=${PHP_DATETIMEZONE:-Africa/Cairo} &&  echo "date.timezone=\"$PHP_DATETIMEZONE\"" >> /etc/php/7.0/cli/php.ini
+echo "[mysqld]" >>  /etc/mysql/my.cnf && echo "sql_mode=''" >>  /etc/mysql/my.cnf
 
