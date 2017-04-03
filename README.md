@@ -19,7 +19,7 @@ $ cd concerto-docker-build/
 ```
 build your image
 ```sh
-$ sudo docker build -f DOCKERFILE -t concerto .
+$ sudo docker build -t concerto .
 ```
 
 run it 
