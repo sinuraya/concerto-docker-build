@@ -1,6 +1,6 @@
 #!/bin/bash
 # install all the debs with mysql & apache 
-MYSQL_ROOT_PASSWORD=hello
+MYSQL_ROOT_PASSWORD=${CONCERTO_MYSQL}
 apt-get update && apt-get upgrade -y && apt-get install -y apache2 wget git  r-base libmysqlclient-dev r-cran-ggplot2 r-cran-plyr r-cran-reshape2 libcairo2-dev curl npm php php-pear php-mysql php-curl libapache2-mod-php php-mcrypt php-json php-xml php-dom apt libcurl4-openssl-dev
 
 
