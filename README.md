@@ -19,7 +19,7 @@ $ cd concerto-docker-build/
 ```
 build your image
 ```sh
-$ sudo docker build -f DOCKERFILE -t concerto .
+$ sudo docker build -t concerto .
 ```
 
 run it 
@@ -27,3 +27,7 @@ run it
 $ sudo docker run -d -p 80:80 concerto
 ```
 concerto should be running on port 80
+
+## Options from Dockerfile
+ - define the commit hash for choosing concerto version
+ - define mysql password
