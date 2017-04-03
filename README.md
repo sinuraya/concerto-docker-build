@@ -28,6 +28,6 @@ $ sudo docker run -d -p 80:80 concerto
 ```
 concerto should be running on port 80
 
-## Options
+## Options from Dockerfile
  - define the commit hash for choosing concerto version
  - define mysql password
