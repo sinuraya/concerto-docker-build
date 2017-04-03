@@ -6,6 +6,8 @@ ENV CONCERTO_COMMIT ${CONCERTO_COMMIT}
 ### create database password
 ARG CONCERTO_MYSQL=hello
 ENV CONCERTO_MYSQL ${CONCERTO_MYSQL}
+## copy tls folder
+##COPY tls/ /tls
 ### install global packages
 COPY install_deb.sh /
 RUN /install_deb.sh
