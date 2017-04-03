@@ -3,10 +3,9 @@
 ## setup everything related to concerto 
 MYSQL_ROOT_PASSWORD=${CONCERTO_MYSQL}
 ### concerto config 
-chown -R www-data /var/www &&
-    git clone https://github.com/campsych/concerto-platform.git &&  
-    mv concerto-platform /var/www/html/concerto ## change this with the version you want ##  -b dev --single-branch
-
+chown -R www-data /var/www
+git clone https://github.com/campsych/concerto-platform.git
+cd concerto-platform
 if [ "$CONCERTO_COMMIT" = "default" ]; then ## choose a commit to build on
   echo "no commit  found moving with the latest NOT RECOMMENDED"
 else
@@ -15,6 +14,10 @@ else
   git checkout ${CONCERTO_COMMIT}
 
 fi
+cd ..
+mv concerto-platform /var/www/html/concerto ## change this with the version you want ##  -b dev --single-branch
+
+
 
 
 
