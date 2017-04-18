@@ -56,3 +56,5 @@ cd /var/www/html/concerto && php app/console concerto:setup
 cd /var/www/html/concerto && php app/console concerto:r:cache
 chown -R www-data:www-data /var/www/html/concerto
 cd /var/www/html/concerto && php app/console concerto:content:import --convert
+service  mysql start
+
