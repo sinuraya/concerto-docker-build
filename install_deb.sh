@@ -17,4 +17,5 @@ service mysql start && mysql --user=root --password=$MYSQL_ROOT_PASSWORD -e "CRE
 PHP_DATETIMEZONE=${PHP_DATETIMEZONE:-Africa/Cairo} &&  echo "date.timezone=\"$PHP_DATETIMEZONE\"" >> /etc/php/7.0/cli/php.ini
 echo "[mysqld]" >>  /etc/mysql/my.cnf && echo "sql_mode=''" >>  /etc/mysql/my.cnf
 update-rc.d mysql defaults   ## add mysql start on restart
+ service  mysql start
 
