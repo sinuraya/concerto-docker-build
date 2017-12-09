@@ -2,8 +2,11 @@
 
 ## setup everything related to concerto 
 MYSQL_HOST=${MYSQL_HOST}
+
 MYSQL_DBNAME ${MYSQL_DBNAME}
+
 MYSQL_USER ${MYSQL_USER}
+
 MYSQL_PASSWORD ${MYSQL_PASSWORD}
 
 ### concerto config 
