@@ -8,7 +8,7 @@ services:
         - MYSQL_HOST=mariadb_db_1
         - MYSQL_DBNAME=concerto_db
         - MYSQL_USER=kpn
-        - MYSQL_PASSWORD=dfewrwqr3dw1ndt4mb4y0ng
+        - MYSQL_PASSWORD=1dfewrwqr3dw1ndt4mb4y0ng
     networks:
       - wp
     ports:
