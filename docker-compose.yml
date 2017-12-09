@@ -1,0 +1,22 @@
+  GNU nano 2.5.3                                                       File: docker-compose.yml                         
+version: '2'
+services:
+  proxy:
+    build: 
+      context : .
+      args:
+        - MYSQL_HOST=mariadb_db_1
+        - MYSQL_DBNAME=concerto_db
+        - MYSQL_USER=kpn
+        - MYSQL_PASSWORD=dfewrwqr3dw1ndt4mb4y0ng
+    networks:
+      - wp
+    ports:
+      - 80:80
+
+networks:
+  wp:
+    external:
+      name: kpn-net
+
+
